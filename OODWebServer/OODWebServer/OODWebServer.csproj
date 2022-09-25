@@ -25,9 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\applications\account\" />
+    <Folder Include="ClientApp\src\applications\Account\" />
     <Folder Include="ClientApp\src\applications\core\core01\" />
-    <Folder Include="ClientApp\src\applications\index\" />
+    <Folder Include="ClientApp\src\applications\Index\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
