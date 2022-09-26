@@ -10,7 +10,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{83f471f0-e646-4d73-b9e9-00c88461fa22}</ProjectGuid>
+    <ProjectGuid>{7ec8031b-6af7-45d6-b6a1-b6a73a1e6d4a}</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
     <StartupFile>
@@ -32,12 +32,6 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="Components\" />
-    <Folder Include="Framework\" />
-    <Folder Include="Library\" />
-    <Folder Include="Styles\" />
-  </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
     <VisualStudio>
