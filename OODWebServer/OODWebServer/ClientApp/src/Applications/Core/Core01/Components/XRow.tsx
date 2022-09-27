@@ -1,3 +1,4 @@
+import * as React from 'react';
 import '../Styles/XRow.css';
 import { Button } from './Button';
 

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -25,14 +25,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\applications\Account\" />
-    <Folder Include="ClientApp\src\applications\core\core01\" />
-    <Folder Include="ClientApp\src\applications\Index\" />
+    <None Include="..\..\Dockerfile" Link="Dockerfile" />
+    <None Include="..\..\README.md" Link="README.md" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\Dockerfile" Link="Dockerfile" />
-    <None Include="..\..\README.md" Link="README.md" />
+    <Folder Include="ClientApp\src\Applications\Account\Specs\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">

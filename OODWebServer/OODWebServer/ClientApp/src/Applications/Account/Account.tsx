@@ -1,8 +1,9 @@
 import { log } from 'console';
-import React, { Component } from 'react';
+import * as React from 'react';
+import { Component } from 'react';
 import { Creation } from './Components/Creation';
 import { Login } from './Components/Login';
-import { StyleThemes } from './core/Components/IComponentProps';
+import { StyleThemes } from '../Core/Core01/Components/IComponentProps';
 
 interface IAppProps {
 
@@ -18,8 +19,8 @@ export enum Screens {
     Create = "Create",
 }
 
-export default class App extends Component<IAppProps, IAppState> {
-    static displayName = App.name;
+export default class Account extends Component<IAppProps, IAppState> {
+    static displayName = Account.name;
 
     constructor(props: IAppProps) {
         super(props);

@@ -1,12 +1,16 @@
-import { Component } from 'react';
+import { Component, ReactNode } from 'react';
 import '../Styles/Activity.css';
 
 interface IActivity {
     name: string;
 }
 
-export class Activity<P, S> extends Component<P, S> implements IActivity {
-    constructor(props: P) {
+interface IActivityProps {
+    children?: ReactNode,
+}
+
+export class Activity<P, S> extends Component<IActivityProps, S> implements IActivity {
+    constructor(props: IActivityProps) {
         super(props);
         this.name = "Activity";
     }

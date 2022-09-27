@@ -1,4 +1,5 @@
-﻿import React, { ChangeEventHandler, Component, Fragment } from 'react';
+﻿import * as React from 'react';
+import { ChangeEventHandler, Component, Fragment } from 'react';
 import { EntityType, Entity } from '../Model/Entity';
 import ListList from './ListList';
 import ListDisplay from './ListDisplay';

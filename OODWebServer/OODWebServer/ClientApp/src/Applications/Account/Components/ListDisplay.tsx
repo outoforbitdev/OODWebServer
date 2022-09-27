@@ -1,4 +1,5 @@
-﻿import React, { ChangeEventHandler, Component } from 'react';
+﻿import * as React from 'react';
+import { ChangeEventHandler, Component } from 'react';
 import { EntityType, Entity } from '../Model/Entity';
 
 interface ListDisplayProps {

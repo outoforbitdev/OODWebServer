@@ -1,11 +1,11 @@
 ﻿import * as React from 'react';
-import { Screens } from '../App';
-import { Button } from '../core/Components/Button';
-import { IComponentProps } from '../core/Components/IComponentProps';
-import { Link } from '../core/Components/Link';
-import { Modal } from '../core/Components/Modal';
-import { PasswordField } from '../core/Components/PasswordField';
-import { TextField } from '../core/Components/TextField';
+import { Screens } from '../Account';
+import { Button } from '../../Core/Core01/Components/Button';
+import { IComponentProps } from '../../Core/Core01/Components/IComponentProps';
+import { Link } from '../../Core/Core01/Components/Link';
+import { Modal } from '../../Core/Core01/Components/Modal';
+import { PasswordField } from '../../Core/Core01/Components/PasswordField';
+import { TextField } from '../../Core/Core01/Components/TextField';
 
 export interface ILoginProps extends IComponentProps {
     changeScreen: (screen: Screens) => void;

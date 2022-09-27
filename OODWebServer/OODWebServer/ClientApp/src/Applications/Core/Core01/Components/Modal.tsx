@@ -1,7 +1,8 @@
+import * as React from 'react';
+import { ReactElement } from 'react';
 import '../Styles/Modal.css';
 import { Button } from './Button';
-import { getClassName } from './IComponentProps';
-import { IComponentProps } from './IComponentProps';
+import { getClassName, IComponentProps } from './IComponentProps';
 import { XRow } from './XRow';
 
 interface IModalProps extends IComponentProps {
@@ -10,7 +11,7 @@ interface IModalProps extends IComponentProps {
     cancel?: string;
 }
 
-export function Modal(props: IModalProps) {
+export function Modal(props: IModalProps): ReactElement<IModalProps> {
 
     return (
         <div className={getClassName(props.className, "OODCoreModalContainer")}>

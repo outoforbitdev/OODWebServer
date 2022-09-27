@@ -39,7 +39,7 @@
     <Folder Include="Styles\" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="App.tsx" />
+    <TypeScriptCompile Include="Account.tsx" />
     <TypeScriptCompile Include="Components\Activity.tsx" />
     <TypeScriptCompile Include="Components\Creation.tsx" />
     <TypeScriptCompile Include="Components\ListDisplay.tsx" />
