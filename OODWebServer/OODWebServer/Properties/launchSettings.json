@@ -24,6 +24,14 @@
         "ASPNETCORE_ENVIRONMENT": "Development",
         "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.SpaProxy"
       }
+    },
+    "OODWebServer-Production": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "https://account.outoforbitdev.com:443;http://account.outoforbitdev.com:80",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production"
+      }
     }
   }
 }
