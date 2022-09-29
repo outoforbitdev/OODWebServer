@@ -10,7 +10,7 @@
   RUN dotnet restore
   COPY . ./
   RUN dotnet publish -c Release -o OODWebServer/bin/Release/net6.0/ --no-restore
-  FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS production
-  COPY --from=build App/OODWebServer/bin/Release/net5.0/ App/
+  FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS production
+  COPY --from=build App/OODWebServer/bin/Release/net6.0/ App/
   WORKDIR /App
 ENTRYPOINT [ "dotnet", "OODWebServer.dll", "--launch-profile OODWebServer-Production" ]
