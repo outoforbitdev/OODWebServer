@@ -55,7 +55,7 @@
       <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
         <RelativePath>wwwroot\%(RecursiveDir)%(FileName)%(Extension)</RelativePath>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <!-- <ExcludeFromSingleFile>true</ExcludeFromSingleFile> -->
       </ResolvedFileToPublish>
     </ItemGroup>
   </Target>
