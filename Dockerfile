@@ -6,14 +6,10 @@
   WORKDIR /App
   COPY OODWebServer/OODWebServer.sln ./
   COPY OODWebServer/OODWebServer/OODWebServer.csproj OODWebServer/
-  # COPY Account.Tests/Account.Tests.csproj Account.Tests/
   RUN dotnet restore
   COPY . ./
   RUN dotnet publish -c Release -o OODWebServer/bin/Release/net6.0/ --no-restore
-  RUN ls
-  RUN ls OODWebServer/bin/Release/net6.0
   FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS production
   COPY --from=build App/OODWebServer/bin/Release/net6.0/ App/
   WORKDIR /App
-  RUN ls
 ENTRYPOINT [ "dotnet", "OODWebServerAssembly.dll", "--launch-profile OODWebServer-Production" ]
