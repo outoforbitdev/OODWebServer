@@ -14,4 +14,4 @@
   COPY --from=build App/OODWebServer/bin/Release/net6.0/ App/
   WORKDIR /App
   RUN ls
-ENTRYPOINT [ "dotnet", "OODWebServer.dll", "--launch-profile OODWebServer-Production" ]
+ENTRYPOINT [ "dotnet", "OODWebServerAssembly.dll", "--launch-profile OODWebServer-Production" ]
