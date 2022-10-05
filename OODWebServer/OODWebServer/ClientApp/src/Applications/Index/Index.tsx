@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import './Styles/Index.css';
 
-export class Home extends Component {
-  static displayName = Home.name;
+export class Index extends Component {
+    static displayName = Index.name;
 
   render() {
     return (
-      <div>
-            <h1 style="color:green;">
+      <div className="OODIndex">
+            <h1>
                 Out of Orbit Development
             </h1>
       </div>
