@@ -12,7 +12,7 @@ span.OODCoreComponentInputField {
     border-color: var(--secondary-border-color);
     background-color: var(--input-background-color);
     color: var(--primary-text-color);
-    padding: 2px;
+    padding: 2px 2px 3px 2px;
 }
 
 .OODCoreComponentInputField input {

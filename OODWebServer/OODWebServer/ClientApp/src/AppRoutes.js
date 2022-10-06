@@ -16,10 +16,14 @@ const AppRoutes = [
     //    path: '/fetch-data',
     //    element: <FetchData />
     //},
-    //{
-    //    path: '/account',
-    //    element: <Account />
-    //}
+    {
+        path: '/account',
+        element: <Account />
+    },
+    {
+        path: '/*',
+        element: <Index />
+    }
 ];
 
 export default AppRoutes;

@@ -38,6 +38,62 @@
     <Folder Include="Library\" />
     <Folder Include="Styles\" />
   </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Components\Article.tsx" />
+    <TypeScriptCompile Include="Components\ArticleSection.tsx" />
+    <TypeScriptCompile Include="Components\Button.tsx" />
+    <TypeScriptCompile Include="Components\Component.tsx" />
+    <TypeScriptCompile Include="Components\IComponentProps.tsx" />
+    <TypeScriptCompile Include="Components\InfoBox.tsx" />
+    <TypeScriptCompile Include="Components\InfoBoxLine.tsx" />
+    <TypeScriptCompile Include="Components\InfoBoxSection.tsx" />
+    <TypeScriptCompile Include="Components\InputField.tsx" />
+    <TypeScriptCompile Include="Components\Link.tsx" />
+    <TypeScriptCompile Include="Components\Modal.tsx" />
+    <TypeScriptCompile Include="Components\PasswordField.tsx" />
+    <TypeScriptCompile Include="Components\SearchBar.tsx" />
+    <TypeScriptCompile Include="Components\TabStrip.tsx" />
+    <TypeScriptCompile Include="Components\TextField.tsx" />
+    <TypeScriptCompile Include="Components\XRow.tsx" />
+    <TypeScriptCompile Include="Framework\Activity.tsx" />
+    <TypeScriptCompile Include="Framework\LoadingPage.tsx" />
+    <TypeScriptCompile Include="Framework\LoginPage.tsx" />
+    <TypeScriptCompile Include="Framework\Workspace.tsx" />
+    <TypeScriptCompile Include="Library\Compose.ts" />
+    <TypeScriptCompile Include="Library\Devices.tsx" />
+    <TypeScriptCompile Include="Library\String.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Components\Button.js" />
+    <Content Include="Components\Button.js.map" />
+    <Content Include="Components\Component.js" />
+    <Content Include="Components\Component.js.map" />
+    <Content Include="Components\IComponentProps.js" />
+    <Content Include="Components\IComponentProps.js.map" />
+    <Content Include="Components\InputField.js" />
+    <Content Include="Components\InputField.js.map" />
+    <Content Include="Components\Link.js" />
+    <Content Include="Components\Link.js.map" />
+    <Content Include="Components\Modal.js" />
+    <Content Include="Components\Modal.js.map" />
+    <Content Include="Components\PasswordField.js" />
+    <Content Include="Components\PasswordField.js.map" />
+    <Content Include="Components\TextField.js" />
+    <Content Include="Components\TextField.js.map" />
+    <Content Include="Components\XRow.js" />
+    <Content Include="Components\XRow.js.map" />
+    <Content Include="Styles\Activity.css" />
+    <Content Include="Styles\Button.css" />
+    <Content Include="Styles\InfoBox.css" />
+    <Content Include="Styles\Input.css" />
+    <Content Include="Styles\Link.css" />
+    <Content Include="Styles\Modal.css" />
+    <Content Include="Styles\SearchBar.css" />
+    <Content Include="Styles\TabStrip.css" />
+    <Content Include="Styles\Themes.css" />
+    <Content Include="Styles\Workspace.css" />
+    <Content Include="Styles\XRow.css" />
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
   <ProjectExtensions>
     <VisualStudio>
