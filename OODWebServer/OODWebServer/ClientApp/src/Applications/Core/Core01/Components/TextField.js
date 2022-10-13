@@ -17,7 +17,7 @@ function TextField(props) {
     var defaultValue = props.defaultValue ? props.defaultValue : "";
     var _a = (0, react_1.useState)(defaultValue), value = _a[0], setValue = _a[1];
     return (React.createElement(InputField_1.InputSpan, null,
-        React.createElement("input", { type: "text", inputMode: "text", value: value, className: "OODCoreComponentTextField", onBlur: (0, InputField_1.onBlur)(onQuickValidate, onFullValidate), onChange: (0, InputField_1.onValueChange)(onQuickValidate, onChange, setValue), onKeyDown: (0, InputField_1.onKeyDown)(setValue, defaultValue) }),
+        React.createElement("input", { type: "text", inputMode: "text", value: value, className: "OODCoreComponentTextField", onBlur: (0, InputField_1.onBlur)(onQuickValidate, onFullValidate), onChange: (0, InputField_1.onValueChange)(onQuickValidate, onChange, setValue), onKeyDown: (0, InputField_1.onKeyDown)(setValue, defaultValue), id: props.id }),
         props.clearable ?
             React.createElement(Button_1.Button, { text: "Clear", onClick: (0, Compose_1.Compose)(__clearField, setValue), seamless: true, width: "40px" }) : null));
 }

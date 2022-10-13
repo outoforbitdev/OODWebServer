@@ -31,6 +31,7 @@ export function TextField(props: ITextFieldProps): JSX.Element {
                 onBlur={onBlur(onQuickValidate, onFullValidate)}
                 onChange={onValueChange(onQuickValidate, onChange, setValue)}
                 onKeyDown={onKeyDown(setValue, defaultValue)}
+                id={props.id}
             />
             {
                 props.clearable ?

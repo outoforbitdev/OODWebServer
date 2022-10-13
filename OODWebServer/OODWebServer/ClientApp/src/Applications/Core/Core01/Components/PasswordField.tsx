@@ -31,6 +31,7 @@ export function PasswordField(props: IPasswordFieldProps): JSX.Element {
                 onChange={onValueChange(onQuickValidate, onChange, setValue)}
                 onKeyDown={onKeyDown(setValue, defaultValue)}
                 size={props.size}
+                id={props.id}
             />
             {
                 props.showable ?

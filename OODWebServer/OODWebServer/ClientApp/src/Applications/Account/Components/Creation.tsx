@@ -11,14 +11,14 @@ export function Creation(props: ILoginProps) {
     return (
         <Modal>
             <label>Email</label>
-            <div><TextField clearable /></div>
+            <div><TextField clearable id="OODAccountEmail" /></div>
             <div><span /></div>
             <label>Password</label>
-            <div><PasswordField showable /></div>
+            <div><PasswordField showable id="OODAccountPassword" /></div>
             <label>Confirm Password</label>
-            <div><PasswordField showable /></div>
+            <div><PasswordField showable id="OODAccountPasswordConfimation" /></div>
             <Button text={"Create Account"}
-                width={"234px"}
+                width={"100%"}
             /><br />
             <Link onClick={() => props.changeScreen(Screens.Login)}>
                 I have an existing account

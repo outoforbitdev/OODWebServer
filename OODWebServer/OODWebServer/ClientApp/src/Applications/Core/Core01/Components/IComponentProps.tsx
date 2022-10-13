@@ -13,6 +13,7 @@ export interface IComponentProps {
     children?: ReactNode;
     theme?: StyleThemes;
     changeTheme?: (theme: StyleThemes) => void;
+    id?: string;
 }
 
 export function getClassName(

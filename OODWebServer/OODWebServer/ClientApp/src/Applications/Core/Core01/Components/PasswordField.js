@@ -17,7 +17,7 @@ function PasswordField(props) {
     var _a = (0, react_1.useState)(defaultValue), value = _a[0], setValue = _a[1];
     var _b = (0, react_1.useState)(false), visible = _b[0], setVisible = _b[1];
     return (React.createElement(InputField_1.InputSpan, null,
-        React.createElement("input", { type: visible ? "text" : "password", inputMode: "text", value: props.defaultValue, onBlur: (0, InputField_1.onBlur)(onQuickValidate, onFullValidate), onChange: (0, InputField_1.onValueChange)(onQuickValidate, onChange, setValue), onKeyDown: (0, InputField_1.onKeyDown)(setValue, defaultValue), size: props.size }),
+        React.createElement("input", { type: visible ? "text" : "password", inputMode: "text", value: props.defaultValue, onBlur: (0, InputField_1.onBlur)(onQuickValidate, onFullValidate), onChange: (0, InputField_1.onValueChange)(onQuickValidate, onChange, setValue), onKeyDown: (0, InputField_1.onKeyDown)(setValue, defaultValue), size: props.size, id: props.id }),
         props.showable ?
             React.createElement(Button_1.Button, { text: visible ? "Hide" : "Show", seamless: true, onClick: toggleVisible(setVisible, visible), width: "40px" }) : null));
 }

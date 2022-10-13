@@ -15,12 +15,12 @@ export function Login(props: ILoginProps) {
     return (
         <Modal>
             <label>Username</label>
-            <div><TextField clearable /></div>
+            <div><TextField clearable id="OODAccountUsername" /></div>
             <div><span /></div>
             <label>Password</label>
-            <div><PasswordField showable /></div>
+            <div><PasswordField showable id="OODAccountPassword" /></div>
             <Button text={"Login"}
-                width={"234px"} 
+                width={"100%"} 
             /><br />
             <Link onClick={() => props.changeScreen(Screens.Create)}>
                 Create Account
