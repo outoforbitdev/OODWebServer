@@ -39,6 +39,9 @@
     <Folder Include="Styles\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Components.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Components\Article.tsx" />
     <TypeScriptCompile Include="Components\ArticleSection.tsx" />
     <TypeScriptCompile Include="Components\Button.tsx" />
@@ -49,6 +52,7 @@
     <TypeScriptCompile Include="Components\InfoBoxSection.tsx" />
     <TypeScriptCompile Include="Components\InputField.tsx" />
     <TypeScriptCompile Include="Components\Link.tsx" />
+    <TypeScriptCompile Include="Components\Popup.tsx" />
     <TypeScriptCompile Include="Components\Modal.tsx" />
     <TypeScriptCompile Include="Components\PasswordField.tsx" />
     <TypeScriptCompile Include="Components\SearchBar.tsx" />
@@ -64,24 +68,6 @@
     <TypeScriptCompile Include="Library\String.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Components\Button.js" />
-    <Content Include="Components\Button.js.map" />
-    <Content Include="Components\Component.js" />
-    <Content Include="Components\Component.js.map" />
-    <Content Include="Components\IComponentProps.js" />
-    <Content Include="Components\IComponentProps.js.map" />
-    <Content Include="Components\InputField.js" />
-    <Content Include="Components\InputField.js.map" />
-    <Content Include="Components\Link.js" />
-    <Content Include="Components\Link.js.map" />
-    <Content Include="Components\Modal.js" />
-    <Content Include="Components\Modal.js.map" />
-    <Content Include="Components\PasswordField.js" />
-    <Content Include="Components\PasswordField.js.map" />
-    <Content Include="Components\TextField.js" />
-    <Content Include="Components\TextField.js.map" />
-    <Content Include="Components\XRow.js" />
-    <Content Include="Components\XRow.js.map" />
     <Content Include="Styles\Activity.css" />
     <Content Include="Styles\Button.css" />
     <Content Include="Styles\InfoBox.css" />

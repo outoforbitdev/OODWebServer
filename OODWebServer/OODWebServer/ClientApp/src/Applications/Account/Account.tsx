@@ -1,9 +1,8 @@
-import { log } from 'console';
 import * as React from 'react';
 import { Component } from 'react';
+import { StyleThemes } from '../Core/Core01/Components/IComponentProps';
 import { Creation } from './Components/Creation';
 import { Login } from './Components/Login';
-import { StyleThemes } from '../Core/Core01/Components/IComponentProps';
 
 interface IAppProps {
 
@@ -50,8 +49,8 @@ export default class Account extends Component<IAppProps, IAppState> {
     }
 
     render() {
-      return (
-          <div className={this.state.theme}>
+        return (
+            <div className={this.state.theme} style={{ height:"300px"}} >
               {this.createScreen(this.state.screen)}
           </div>
     );
