@@ -5,25 +5,32 @@ import {
 import { Compose } from '../Library/Compose';
 import '../Styles/Input.css';
 import { Button } from './Button';
-import { defaultValidator, IInputProps, InputSpan, onBlur, onKeyDown, onValueChange } from './InputField';
+import { defaultValidator, IInputOptions, IInputProps, InputSpan, onBlur, onKeyDown, onValueChange } from './InputField';
 
-interface ITextFieldProps extends IInputProps<string> {
+interface ITextFieldOptions extends IInputOptions<string> {
     clearable?: boolean;
 }
 
+interface ITextFieldProps extends IInputProps<string> {
+    options?: ITextFieldOptions;
+}
+
 export function TextField(props: ITextFieldProps): JSX.Element {
-    const onQuickValidate = props.onQuickValidate ?
-        props.onQuickValidate : defaultValidator;
-    const onFullValidate = props.onFullValidate ?
-        props.onFullValidate : defaultValidator;
-    const onChange = props.onValueChange ?
-        props.onValueChange : (_val: string) => { };
-    const defaultValue = props.defaultValue ? props.defaultValue : "";
+    let options = props.options ?? {};
+    const onQuickValidate = options.onQuickValidate ?
+        options.onQuickValidate : defaultValidator;
+    const onFullValidate = options.onFullValidate ?
+        options.onFullValidate : defaultValidator;
+    const onChange = options.onValueChange ?
+        options.onValueChange : (_val: string) => { };
+    const defaultValue = options.defaultValue ? options.defaultValue : "";
+
+    props.options = options;
 
     const [value, setValue] = useState(defaultValue);
 
     return (
-        <InputSpan>
+        <InputSpan options={options}>
             <input type={"text"}
                 inputMode={"text"}
                 value={value}
@@ -34,7 +41,7 @@ export function TextField(props: ITextFieldProps): JSX.Element {
                 id={props.id}
             />
             {
-                props.clearable ?
+                props.options.clearable ?
                     <Button text={"Clear"}
                         onClick={Compose(__clearField, setValue)}
                         seamless

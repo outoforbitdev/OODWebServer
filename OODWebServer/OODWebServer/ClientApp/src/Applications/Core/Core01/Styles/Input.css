@@ -2,17 +2,11 @@
 body {
 }
 
-/*input.OODCoreComponentInput {
-    width: 135px;
-}*/
-
 span.OODCoreComponentInputField {
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--secondary-border-color);
+    border: 1px solid var(--secondary-border-color);
     background-color: var(--input-background-color);
     color: var(--primary-text-color);
-    padding: 2px 2px 3px 2px;
+    padding: 3px 2px 3px 2px;
 }
 
 .OODCoreComponentInputField input {

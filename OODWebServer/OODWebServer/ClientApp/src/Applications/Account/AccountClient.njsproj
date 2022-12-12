@@ -42,6 +42,9 @@
     <TypeScriptCompile Include="Account.tsx" />
     <TypeScriptCompile Include="Components\Activity.tsx" />
     <TypeScriptCompile Include="Components\Creation.tsx" />
+    <TypeScriptCompile Include="Components\Profile.tsx">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="Components\ListDisplay.tsx" />
     <TypeScriptCompile Include="Components\ListList.tsx" />
     <TypeScriptCompile Include="Components\Login.tsx" />

@@ -20,9 +20,7 @@ export function InfoBoxLine(props: IInfoBoxLineProps) {
     switch (props.lineType) {
         case InfoBoxLineType.String:
         default:
-            <TextField
-                defaultValue={props.value}
-            />
+            <TextField options={{ defaultValue: props.value, }} />
     }
 
     return (

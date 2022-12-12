@@ -2,7 +2,8 @@ import * as React from 'react';
 import {
     ChangeEvent,
     FocusEvent,
-    KeyboardEvent
+    KeyboardEvent,
+    Fragment,
 } from 'react';
 import '../Styles/Input.css';
 import '../Styles/Themes.css';
@@ -11,7 +12,20 @@ import { getClassName, IComponentProps } from './IComponentProps';
 type FieldValidator<T> = (val: T) => boolean;
 type FieldChange<T> = (val: T) => void;
 
-export interface IInputProps<T> extends IComponentProps {
+export interface IInputSpanProps extends IComponentProps {
+    options?: IInputSpanOptions;
+}
+
+export interface IInputSpanOptions {
+    label?: string;
+    labelDifferentLine?: boolean;
+}
+
+export interface IInputProps<T> extends IInputSpanProps {
+
+}
+
+export interface IInputOptions<T> extends IInputSpanOptions {
     defaultValue?: T;
     onValueChange?: FieldChange<T>;
     onQuickValidate?: FieldValidator<T>;
@@ -19,11 +33,15 @@ export interface IInputProps<T> extends IComponentProps {
     size?: number;
 }
 
-export function InputSpan(props: IComponentProps): JSX.Element {
+export function InputSpan(props: IInputSpanProps): JSX.Element {
     return (
-        <span className={getClassName("OODCoreComponentInputField", props.className, props.theme)}>
-            {props.children}
-        </span>
+        <Fragment>
+            {props.options?.label ? <label>{props.options.label}</label> : null}
+            {props.options?.label && props.options?.labelDifferentLine ? <br /> : <span> </span> }
+            <span className={getClassName("OODCoreComponentInputField", props.className, props.theme)}>
+                {props.children}
+            </span>
+        </Fragment>
     );
 }
 

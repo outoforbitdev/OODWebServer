@@ -4,20 +4,25 @@ import {
 } from 'react';
 import '../Styles/Input.css';
 import { Button } from './Button';
-import { defaultValidator, IInputProps, InputSpan, onBlur, onKeyDown, onValueChange } from './InputField';
+import { defaultValidator, IInputOptions, IInputProps, InputSpan, onBlur, onKeyDown, onValueChange } from './InputField';
 
-interface IPasswordFieldProps extends IInputProps<string> {
+interface IPasswordFieldOptions extends IInputOptions<string> {
     showable?: boolean;
 }
 
+interface IPasswordFieldProps extends IInputProps<string> {
+    options?: IPasswordFieldOptions;
+}
+
 export function PasswordField(props: IPasswordFieldProps): JSX.Element {
-    const onQuickValidate = props.onQuickValidate ?
-        props.onQuickValidate : defaultValidator;
-    const onFullValidate = props.onFullValidate ?
-        props.onFullValidate : defaultValidator;
-    const onChange = props.onValueChange ?
-        props.onValueChange : (_val: string) => { };
-    const defaultValue = props.defaultValue ? props.defaultValue : "";
+    let options = props.options ?? {};
+    const onQuickValidate = options.onQuickValidate ?
+        options.onQuickValidate : defaultValidator;
+    const onFullValidate = options.onFullValidate ?
+        options.onFullValidate : defaultValidator;
+    const onChange = options.onValueChange ?
+        options.onValueChange : (_val: string) => { };
+    const defaultValue = options.defaultValue ? options.defaultValue : "";
 
     const [value, setValue] = useState(defaultValue);
     const [visible, setVisible] = useState(false);
@@ -26,15 +31,15 @@ export function PasswordField(props: IPasswordFieldProps): JSX.Element {
         <InputSpan>
             <input type={visible ? "text" : "password"}
                 inputMode={"text"}
-                value={props.defaultValue}
+                value={options.defaultValue}
                 onBlur={onBlur(onQuickValidate, onFullValidate)}
                 onChange={onValueChange(onQuickValidate, onChange, setValue)}
                 onKeyDown={onKeyDown(setValue, defaultValue)}
-                size={props.size}
+                size={options.size}
                 id={props.id}
             />
             {
-                props.showable ?
+                options.showable ?
                     <Button text={visible ? "Hide" : "Show"}
                         seamless
                         onClick={toggleVisible(setVisible, visible)}
